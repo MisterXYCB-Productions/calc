@@ -198,8 +198,7 @@ def mainMenu():
                 
                 triangularMenu(option)
 
-            elif(): 
-                input1 = float(input("input1: "))
+            input1 = float(input("input1: "))
             
             #sin
             if(option == float(1)):
