@@ -10,7 +10,7 @@ def mainMenu():
     option = 0
 
     #main Menu
-    option = float(input("[0:exit] [1:einfach] [2:komplex] [3:trigonometrie] [4:umrechnung] [5:grafiktaschenrechner]"))
+    option = float(input("[0:exit] [1:einfach] [2:komplex] [3:trigonometrie] [4:umrechnung] [5:grafiktaschenrechner] [6:algorithmen]"))
 
     #easter egg: 1 Rock Paper Scissors game!
     if(option == float(42)):
@@ -218,7 +218,7 @@ def mainMenu():
 
         trigonometricMenu(option)
 
-    #converison
+    #conversion
     elif(option == float(4)):
         def conversionMenu(option):
             option = float(input("[0:go back] [1:Länge] [2:Volumen]"))
@@ -281,6 +281,33 @@ def mainMenu():
                 resultFunction(result)
 
         conversionMenu(option)
+    
+    
+    
+    #space for graphical calculator
+    
+    
+    
+    
+    
+    
+    
+    elif(option == float(6)):
+        def cryptoMenu(option):
+            option = float(input("[0:go back] [1:Sha256] [2:Sha512]"))
+            import hashlib
+            
+            if(option == float(1))
+                input1 = float(input("input1: "))
+                result = hashlib.sha256(input1.encode("ascii")).hexdigest()
+                
+            elif(option == float(2))
+                input1 = float(input("input1:" )
+                hashlib.sha512(input1.encode("ascii")).hexdigest()
+                
+    
+    
+    
     
     #space for more
     elif(option == float(5)):
