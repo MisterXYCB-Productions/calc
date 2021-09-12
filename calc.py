@@ -329,9 +329,6 @@ def mainMenu():
                 result = hashlib.sha1(input1.encode("ascii")).hexdigest()
                 resultFunction(result)
             
-           
-                resultFunction(result)
-            
             elif(option == float(11)):
                 result = hashlib.md5(input1.encode("ascii")).hexdigest()
                 resultFunction(result)
@@ -349,12 +346,6 @@ def mainMenu():
                 resultFunction(result)
             elif(option == float(32)):
                 result = hashlib.blake2s(input1.encode("ascii")).hexdigest()
-                resultFunction(result)
-
-
-
-
-            
                 resultFunction(result)
 
         cryptoMenu(option)
