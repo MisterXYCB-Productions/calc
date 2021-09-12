@@ -284,30 +284,77 @@ def mainMenu():
 
         conversionMenu(option)
     
-    
-    
     #space for graphical calculator
     
+            
+
+
     
     
     
-    
+       
     
     #crypto functions
     elif(option == float(6)):
         def cryptoMenu(option):
-            option = float(input("[0:go back] [1:Sha256] [2:Sha512]"))
+            option = float(input("[0:go back] [1:sha] [2:md] [3:shake] [4:blake2]"))
             import hashlib
+
+            if(option == float(1)):
+                option = float(input("[1:sha256] [2:sha512] [3:sha224] [4:sha384] [5:sha1]"))
+            elif(option == float(2)):
+                option = float(input("[1:md5]")) + float(10)
+            elif(option == float(3)):
+                option = float(input("[1:shake_128] [2:shake_256]")) + float(20)
+            elif(option == float(4)):
+                option = float(input("[1:blake2b] [2:blake2s]")) + float(30)
+
+            input1 = str(input("input1: "))
             
             if(option == float(0)):
                 mainMenu()
             elif(option == float(1)):
-                input1 = str(input("input1: "))
                 result = hashlib.sha256(input1.encode("ascii")).hexdigest()
                 resultFunction(result)
             elif(option == float(2)):
-                input1 = str(input("input1:" ))
                 result = hashlib.sha512(input1.encode("ascii")).hexdigest()
+                resultFunction(result)
+            elif(option == float(3)):
+                result = hashlib.sha224(input1.encode("ascii")).hexdigest()
+                resultFunction(result)
+            elif(option == float(4)):
+                result = hashlib.sha384(input1.encode("ascii")).hexdigest()
+                resultFunction(result)
+            elif(option == float(5)):
+                result = hashlib.sha1(input1.encode("ascii")).hexdigest()
+                resultFunction(result)
+            
+           
+                resultFunction(result)
+            
+            elif(option == float(11)):
+                result = hashlib.md5(input1.encode("ascii")).hexdigest()
+                resultFunction(result)
+
+            elif(option == float(21)):
+                result = hashlib.shake_128(input1.encode("ascii")).hexdigest()
+                resultFunction(result)
+            elif(option == float(22)):
+                result = hashlib.shake_256(input1.encode("ascii")).hexdigest()
+                resultFunction(result)
+        
+            elif(option == float(31)):
+                result = hashlib.blake2b(input1.encode("ascii")).hexdigest()
+                resultFunction(result)
+                resultFunction(result)
+            elif(option == float(32)):
+                result = hashlib.blake2s(input1.encode("ascii")).hexdigest()
+                resultFunction(result)
+
+
+
+
+            
                 resultFunction(result)
 
         cryptoMenu(option)
