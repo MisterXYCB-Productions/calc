@@ -291,17 +291,17 @@ def mainMenu():
     
     
     
-    
+    #crypto functions
     elif(option == float(6)):
         def cryptoMenu(option):
             option = float(input("[0:go back] [1:Sha256] [2:Sha512]"))
             import hashlib
             
-            if(option == float(1))
+            if(option == float(1)):
                 input1 = float(input("input1: "))
                 result = hashlib.sha256(input1.encode("ascii")).hexdigest()
                 
-            elif(option == float(2))
+            elif(option == float(2)):
                 input1 = float(input("input1:" )
                 hashlib.sha512(input1.encode("ascii")).hexdigest()
                 
