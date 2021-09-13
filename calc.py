@@ -12,7 +12,9 @@ def mainMenu():
     option = 0
 
     #main Menu
-    option = float(input("[0:exit] [1:einfach] [2:komplex] [3:trigonometrie] [4:umrechnung] [5:grafiktaschenrechner] [6:algorithmen]"))
+    option = float(input("[0:exit] [1:einfach] [2:komplex] [3:trigonometrie] [4:umrechnung] [5:grafiktaschenrechner] [6:algorithmen] [7:freie berechnung]"))
+
+    
 
     #easter egg: 1 Rock Paper Scissors game!
     if(option == float(42)):
@@ -27,23 +29,27 @@ def mainMenu():
             while user_choice != 4:
                 computer_choice = random.randint(1, 3)
                 if user_choice == computer_choice and user_choice == 1:
-                    print("Tie! We both chose rock!")
+                    print("\nTie! We both chose rock!\n")
                 if user_choice == computer_choice and user_choice == 2:
-                    print("Tie! We both chose paper!")
+                    print("\nTie! We both chose paper!\n")
                 if user_choice == computer_choice and user_choice == 3:
-                    print("Tie! We both chose scissors!")
+                    print("\nTie! We both chose scissors!\n")
                 elif user_choice == 1 and computer_choice == 2:
-                    print("You lose! I chose paper and you rock!")
+                    print("\nYou lose! I chose paper and you rock!\n")
                 elif user_choice == 1 and computer_choice == 3:
-                    print("You win! You chose rock and i scissors!")
+                    print("\nYou win! You chose rock and i scissors!\n")
                 elif user_choice == 2 and computer_choice == 1:
-                    print("You win! You chose paper and i rock!")
+                    print("\nYou win! You chose paper and i rock!\n")
                 elif user_choice == 2 and computer_choice == 3:
-                    print("You lose! I chose scissors and you paper!")
+                    print("\nYou lose! I chose scissors and you paper!\n")
                 elif user_choice == 3 and computer_choice == 1:
-                    print("You lose! I chose rock and you scissors!")
+                    print("\nYou lose! I chose rock and you scissors!\n")
                 elif user_choice == 3 and computer_choice == 2:
-                    print("You win! You chose scissors and i paper!")
+                    print("\nYou win! You chose scissors and i paper!\n")
+                elif(user_choice == float(69)):
+                    print("\nNice!\n")
+                else:
+                    print("\nYou loose because you didnt choose anything\n")
                 print("Please choose:")
                 print("1. Rock")
                 print("2. Paper")
@@ -74,21 +80,25 @@ def mainMenu():
 
             #add
             if(option == float(1)):
+                print("\n" + str(input1) + " + " + str(input2) + " = ")
                 result = input1 + input2
                 resultFunction(result)
             
             #substract
             elif(option == float(2)):
+                print("\n" + str(input1) + " - " + str(input2) + " = ")
                 result = input1 - input2
                 resultFunction(result)
             
             #multiplicate
             elif(option == float(3)):
+                print("\n" + str(input1) + " * " + str(input2) + " = ")
                 result = input1 * input2
                 resultFunction(result)
             
             #divide
             elif(option == float(4)):
+                print("\n" + str(input1) + " / " + str(input2) + " = ")
                 result = input1 / input2
                 resultFunction(result)
 
@@ -107,12 +117,14 @@ def mainMenu():
             
             #squareroot
             if(option == float(1)):
+                print("\nWurzel aus " + str(input1) + " = ")
                 result = math.sqrt(input1)
                 resultFunction(result)
 
             #exponential
             elif(option == float(2)):
                 input2 = float(input("input2: "))
+                print("\n" + str(input1) + " ^ " + str(input2) + " = ")
                 result = input1 ** input2
                 resultFunction(result)
 
@@ -204,16 +216,19 @@ def mainMenu():
             
             #sin
             if(option == float(1)):
+                print("\nSinus von " + str(input1) + " =")
                 result = math.sin(input1)
                 resultFunction(result)
             
             #cos
             elif(option == float(2)):
+                print("\nCosinus von " + str(input1) + " =")
                 result = math.cos(input1)
                 resultFunction(result)
             
             #tan
             elif(option == float(3)):
+                print("\nTangens von " + str(input1) + " =")
                 result = math.tan(input1)
                 resultFunction(result)
 
@@ -286,12 +301,21 @@ def mainMenu():
     
     #space for graphical calculator
     
+    elif(option == float(5)):
+        def graphicalMenu(option):
+            import string
+
+            option = str(input("f(x): "))
             
 
 
-    
-    
-    
+        graphicalMenu(option)
+
+
+
+
+
+
        
     
     #crypto functions
@@ -354,13 +378,12 @@ def mainMenu():
     
     
     
-    
-    #space for more
-    elif(option == float(5)):
-        result = "error: function not availible yet"
+    if(option == 7):
+        result = "\nFunction not availible yet"
         resultFunction(result)
-
-    if(option == 0): 
+    if(option == 69):
+        print("\nNice!\n")
+    elif(option == 0): 
         exit()
 
 mainMenu()
