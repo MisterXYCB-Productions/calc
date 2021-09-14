@@ -308,16 +308,28 @@ def mainMenu():
 
             option = float(input("[1:linear] [2:] [3:sinusfuktion] [4:cosinusfunktion]"))
             import pygame
-            from math import pi
 
             if(option == 1):
                 print("formel: f(x)=ax+b")
                 a = float(input("a: "))
-                b = float(input("b: "))
+                b = float(input("b: ")) * 25 - float(250)
 
                 pygame.init()
                 screen = pygame.display.set_mode((500, 500))
-                screen.fill((0, 0, 0))
+                screen.fill((255, 255, 255))
+
+                for i in range(10):
+                        i = (i - 5) * 50
+
+                        altx = float(i + 250)
+                        alty = float((a * i + b) * -1)
+                        
+                        x = float(i + 300)
+                        y = float((a * (i + 50) + b) * -1)
+                        
+                        print("x= " + str(x) + "y= " + str(y) + "altx= " + str(altx) + "alty= " + str(alty))
+                        #pygame.draw.line(screen, (255, 255, 255), (altx, alty), (x, y), 2)
+                        #pygame.display.update()
 
                 while True:
                     for event in pygame.event.get():
@@ -325,96 +337,64 @@ def mainMenu():
                         if event.type == pygame.QUIT:
                             quit()
     
-                    pygame.draw.line(screen, (255, 255, 255), (0, 0), (500, 500), 5)
-                    pygame.display.update()
-
-                for i in range(10):
-                    x = i + 0.0
-                    y = float( a * ( x + 1) + b )
-                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
-                    x = i + 0.1
-                    y = float( a * ( x + 1) + b )
-                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
-                    x = i + 0.2
-                    y = float( a * ( x + 1) + b )
-                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
-                    x = i + 0.3
-                    y = float( a * ( x + 1) + b )
-                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
-                    x = i + 0.4
-                    y = float( a * ( x + 1) + b )
-                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
-                    x = i + 0.5
-                    y = float( a * ( x + 1) + b )
-                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
-                    x = i + 0.6
-                    y = float( a * ( x + 1) + b )
-                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
-                    x = i + 0.7
-                    y = float( a * ( x + 1) + b )
-                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
-                    x = i + 0.8
-                    y = float( a * ( x + 1) + b )
-                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
-                    x = i + 0.9
-                    y = float( a * ( x + 1) + b )
-                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
+                    
+                    for i in range(10):
+                        i = (i - 5) * 50
+                        
+                        pygame.draw.line(screen, (20, 40, 60), (250, 0), (250, 500))
+                        pygame.draw.line(screen, (20, 40, 60), (0, 250), (500, 250))
+                        pygame.display.update()
+                        
+                        altx = float(i + 250)
+                        alty = float((a * i + b) * -1)
+                        
+                        x = float(i + 300)
+                        y = float((a * (i + 50) + b) * -1)
+                        
+                        #print("x= " + str(x) + "y= " + str(y) + "altx= " + str(altx) + "alty= " + str(alty))
+                        pygame.draw.line(screen, (0, 0, 255), (altx, alty), (x, y))
+                        pygame.display.update()
+                        
+                        
             
-            elif(option == 2):
-                print("function not availible yet")
+                    
+            elif(option == float(3)):
 
-            elif(option == 3):
+
                 print("formel: s(x)=a*sin(c(x-b))")
                 a = float(input("a: "))
                 b = float(input("b: "))
                 c = float(input("c: "))
 
-                for i in range(10):
-                    x = i + 0.0
-                    y = float( a * math.sin( c * ( x - b )))
-                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
-                    x = i + 0.1
-                    y = float( a * math.sin( c * ( x - b )))
-                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
-                    x = i + 0.2
-                    y = float( a * math.sin( c * ( x - b )))
-                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
-                    x = i + 0.3
-                    y = float( a * math.sin( c * ( x - b )))
-                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
-                    x = i + 0.4
-                    y = float( a * math.sin( c * ( x - b )))
-                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
-                    x = i + 0.5
-                    y = float( a * math.sin( c * ( x - b )))
-                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
-                    x = i + 0.6
-                    y = float( a * math.sin( c * ( x - b )))
-                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
-                    x = i + 0.7
-                    y = float( a * math.sin( c * ( x - b )))
-                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
-                    x = i + 0.8
-                    y = float( a * math.sin( c * ( x - b )))
-                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
-                    x = i + 0.9
-                    y = float( a * math.sin( c * ( x - b )))
-                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
+                pygame.init()
+                screen = pygame.display.set_mode((500, 500))
+                screen.fill((255, 255, 255))
+                
+                
 
+                    #print("x= " + str(x) + "y= " + str(y) + "altx= " + str(altx) + "alty= " + str(alty))
+                    
+                while True:
+                    for event in pygame.event.get():
+    
+                        if event.type == pygame.QUIT:
+                            quit()
+                    for i in range(10):
+                        i = (i - 5) * 50
 
-
-            
+                        x = float(i + 300)
+                        y = float( a * math.sin( c * ( (i + 50) - b )))
+                        altx = float(i + 250)
+                        alty = float( a * math.sin( c * ( i - b )))
+                    pygame.draw.line(screen, (20, 40, 60), (250, 0), (250, 500))
+                    pygame.draw.line(screen, (20, 40, 60), (0, 250), (500, 250))
+                    pygame.draw.line(screen, (0, 0, 255), (altx, alty), (x, y))
+                    pygame.display.update()
 
 
         graphicalMenu(option)
 
 
-
-
-
-
-       
-    
     #crypto functions
     elif(option == float(6)):
         def cryptoMenu(option):
