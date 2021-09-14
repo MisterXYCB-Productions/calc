@@ -303,9 +303,111 @@ def mainMenu():
     
     elif(option == float(5)):
         def graphicalMenu(option):
-            import string
 
-            option = str(input("f(x): "))
+
+
+            option = float(input("[1:linear] [2:] [3:sinusfuktion] [4:cosinusfunktion]"))
+            import pygame
+            from math import pi
+
+            if(option == 1):
+                print("formel: f(x)=ax+b")
+                a = float(input("a: "))
+                b = float(input("b: "))
+
+                pygame.init
+                screen = pygame.display.set_mode((500, 500))
+                WHITE = pygame.Color(0, 0, 0)
+                BLACK = pygame.Color(0, 0, 0)
+                screen.fill((255, 255, 255))
+                
+                size = (500, 500)
+                line = pygame.Surface(size)
+                pygame.draw.line(line, (BLACK), (0, 0), (500, 500), 50)
+
+                while True:
+                    for event in pygame.event.get():
+                        if event.type == pygame.QUIT:
+                            quit()
+    
+                    
+                    pygame.display.update()
+
+                for i in range(10):
+                    x = i + 0.0
+                    y = float( a * ( x + 1) + b )
+                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
+                    x = i + 0.1
+                    y = float( a * ( x + 1) + b )
+                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
+                    x = i + 0.2
+                    y = float( a * ( x + 1) + b )
+                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
+                    x = i + 0.3
+                    y = float( a * ( x + 1) + b )
+                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
+                    x = i + 0.4
+                    y = float( a * ( x + 1) + b )
+                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
+                    x = i + 0.5
+                    y = float( a * ( x + 1) + b )
+                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
+                    x = i + 0.6
+                    y = float( a * ( x + 1) + b )
+                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
+                    x = i + 0.7
+                    y = float( a * ( x + 1) + b )
+                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
+                    x = i + 0.8
+                    y = float( a * ( x + 1) + b )
+                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
+                    x = i + 0.9
+                    y = float( a * ( x + 1) + b )
+                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
+            
+            elif(option == 2):
+                print("function not availible yet")
+
+            elif(option == 3):
+                print("formel: s(x)=a*sin(c(x-b))")
+                a = float(input("a: "))
+                b = float(input("b: "))
+                c = float(input("c: "))
+
+                for i in range(10):
+                    x = i + 0.0
+                    y = float( a * math.sin( c * ( x - b )))
+                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
+                    x = i + 0.1
+                    y = float( a * math.sin( c * ( x - b )))
+                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
+                    x = i + 0.2
+                    y = float( a * math.sin( c * ( x - b )))
+                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
+                    x = i + 0.3
+                    y = float( a * math.sin( c * ( x - b )))
+                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
+                    x = i + 0.4
+                    y = float( a * math.sin( c * ( x - b )))
+                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
+                    x = i + 0.5
+                    y = float( a * math.sin( c * ( x - b )))
+                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
+                    x = i + 0.6
+                    y = float( a * math.sin( c * ( x - b )))
+                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
+                    x = i + 0.7
+                    y = float( a * math.sin( c * ( x - b )))
+                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
+                    x = i + 0.8
+                    y = float( a * math.sin( c * ( x - b )))
+                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
+                    x = i + 0.9
+                    y = float( a * math.sin( c * ( x - b )))
+                    print("\nx = " + str( x + 1 ) + "\ny = " + str(y))
+
+
+
             
 
 
