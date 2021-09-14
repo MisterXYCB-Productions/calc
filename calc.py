@@ -315,22 +315,17 @@ def mainMenu():
                 a = float(input("a: "))
                 b = float(input("b: "))
 
-                pygame.init
+                pygame.init()
                 screen = pygame.display.set_mode((500, 500))
-                WHITE = pygame.Color(0, 0, 0)
-                BLACK = pygame.Color(0, 0, 0)
-                screen.fill((255, 255, 255))
-                
-                size = (500, 500)
-                line = pygame.Surface(size)
-                pygame.draw.line(line, (BLACK), (0, 0), (500, 500), 50)
+                screen.fill((0, 0, 0))
 
                 while True:
                     for event in pygame.event.get():
+        
                         if event.type == pygame.QUIT:
                             quit()
     
-                    
+                    pygame.draw.line(screen, (255, 255, 255), (0, 0), (500, 500), 5)
                     pygame.display.update()
 
                 for i in range(10):
