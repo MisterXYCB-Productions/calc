@@ -12,7 +12,7 @@ def mainMenu():
     option = 0
 
     #main Menu
-    option = float(input("[0:exit] [1:einfach] [2:komplex] [3:trigonometrie] [4:umrechnung] [5:grafiktaschenrechner] [6:algorithmen] [7:freie berechnung]"))
+    option = float(input("[0:exit] [1:einfach] [2:komplex] [3:trigonometrie] [4:umrechnung] [5:grafiktaschenrechner] [6:algorithmen] [7:freie berechnung] [8:konstanten]"))
 
     
 
@@ -249,7 +249,7 @@ def mainMenu():
                 option = float(input("[1:km->mil] [2:mil->km] [3:meter->feet] [4:feet->meter] [5:cm->zoll] [6:zoll->cm] [7:km->sm] [8:sm->km]"))
                 input1 = float(input("input1: "))
 
-                def distancesMenu():
+                def distancesMenu(option):
                     #km->mil
                     if(option == float(1)):
                         result = input1 / 1.609
@@ -312,7 +312,7 @@ def mainMenu():
             if(option == 1):
                 print("formel: f(x)=ax+b")
                 a = float(input("a: "))
-                b = float(input("b: ")) * 25 - float(250)
+                b = float(input("b: ")) * 50 - float(250)
 
                 pygame.init()
                 screen = pygame.display.set_mode((500, 500))
@@ -343,6 +343,48 @@ def mainMenu():
                         
                         pygame.draw.line(screen, (20, 40, 60), (250, 0), (250, 500))
                         pygame.draw.line(screen, (20, 40, 60), (0, 250), (500, 250))
+
+                        pygame.draw.line(screen, (20, 40, 60), (245, 225), (255, 225))
+                        pygame.draw.line(screen, (20, 40, 60), (240, 200), (260, 200))
+                        pygame.draw.line(screen, (20, 40, 60), (245, 175), (255, 175))
+                        pygame.draw.line(screen, (20, 40, 60), (240, 150), (260, 150))
+                        pygame.draw.line(screen, (20, 40, 60), (245, 125), (255, 125))
+                        pygame.draw.line(screen, (20, 40, 60), (240, 100), (260, 100))
+                        pygame.draw.line(screen, (20, 40, 60), (245, 75), (255, 75))
+                        pygame.draw.line(screen, (20, 40, 60), (240, 50), (260, 50))
+                        pygame.draw.line(screen, (20, 40, 60), (245, 25), (255, 25))
+                        pygame.draw.line(screen, (20, 40, 60), (240, 0), (260, 0))
+                        pygame.draw.line(screen, (20, 40, 60), (245, 275), (255, 275))
+                        pygame.draw.line(screen, (20, 40, 60), (240, 300), (260, 300))
+                        pygame.draw.line(screen, (20, 40, 60), (245, 325), (255, 325))
+                        pygame.draw.line(screen, (20, 40, 60), (240, 350), (260, 350))
+                        pygame.draw.line(screen, (20, 40, 60), (245, 375), (255, 375))
+                        pygame.draw.line(screen, (20, 40, 60), (240, 400), (260, 400))
+                        pygame.draw.line(screen, (20, 40, 60), (245, 425), (255, 425))
+                        pygame.draw.line(screen, (20, 40, 60), (240, 450), (260, 450))
+                        pygame.draw.line(screen, (20, 40, 60), (245, 475), (255, 475))
+                        pygame.draw.line(screen, (20, 40, 60), (240, 500), (260, 500))
+
+                        pygame.draw.line(screen, (20, 40, 60), (225, 245), (225, 255))
+                        pygame.draw.line(screen, (20, 40, 60), (200, 240), (200, 260))
+                        pygame.draw.line(screen, (20, 40, 60), (175, 245), (175, 255))
+                        pygame.draw.line(screen, (20, 40, 60), (150, 240), (150, 260))
+                        pygame.draw.line(screen, (20, 40, 60), (125, 245), (125, 255))
+                        pygame.draw.line(screen, (20, 40, 60), (100, 240), (100, 260))
+                        pygame.draw.line(screen, (20, 40, 60), (75, 245), (75, 255))
+                        pygame.draw.line(screen, (20, 40, 60), (50, 240), (50, 260))
+                        pygame.draw.line(screen, (20, 40, 60), (25, 245), (25, 255))
+                        pygame.draw.line(screen, (20, 40, 60), (275, 245), (275, 255))
+                        pygame.draw.line(screen, (20, 40, 60), (300, 240), (300, 260))
+                        pygame.draw.line(screen, (20, 40, 60), (325, 245), (325, 255))
+                        pygame.draw.line(screen, (20, 40, 60), (350, 240), (350, 260))
+                        pygame.draw.line(screen, (20, 40, 60), (375, 245), (375, 255))
+                        pygame.draw.line(screen, (20, 40, 60), (400, 240), (400, 260))
+                        pygame.draw.line(screen, (20, 40, 60), (425, 245), (425, 255))
+                        pygame.draw.line(screen, (20, 40, 60), (450, 240), (450, 260))
+                        pygame.draw.line(screen, (20, 40, 60), (475, 245), (475, 255))
+                        pygame.draw.line(screen, (20, 40, 60), (500, 240), (500, 260))
+
                         pygame.display.update()
                         
                         altx = float(i + 250)
@@ -356,7 +398,93 @@ def mainMenu():
                         pygame.display.update()
                         
                         
-            
+            elif(option == float(2)):
+                print("formel: f(x)=ax^2+b")
+                a = float(input("a: "))
+                b = float(input("b: ")) * 50 - float(250)
+
+                pygame.init()
+                screen = pygame.display.set_mode((500, 500))
+                screen.fill((255, 255, 255))
+
+                for i in range(10):
+                        i = (i - 5) * 50
+
+                        altx = float(i + 250)
+                        alty = float((a * i ** 2 + b) * -1)
+                        
+                        x = float(i + 300)
+                        y = float((a * (i + 50) ** 2 + b) * -1)
+                        
+                        print("x= " + str(x) + "y= " + str(y) + "altx= " + str(altx) + "alty= " + str(alty))
+                        #pygame.draw.line(screen, (255, 255, 255), (altx, alty), (x, y), 2)
+                        #pygame.display.update()
+
+                while True:
+                    for event in pygame.event.get():
+        
+                        if event.type == pygame.QUIT:
+                            quit()
+    
+                    
+                    for i in range(10):
+                        i = (i - 5) * 50
+                        
+                        pygame.draw.line(screen, (20, 40, 60), (250, 0), (250, 500))
+                        pygame.draw.line(screen, (20, 40, 60), (0, 250), (500, 250))
+
+                        pygame.draw.line(screen, (20, 40, 60), (245, 225), (255, 225))
+                        pygame.draw.line(screen, (20, 40, 60), (240, 200), (260, 200))
+                        pygame.draw.line(screen, (20, 40, 60), (245, 175), (255, 175))
+                        pygame.draw.line(screen, (20, 40, 60), (240, 150), (260, 150))
+                        pygame.draw.line(screen, (20, 40, 60), (245, 125), (255, 125))
+                        pygame.draw.line(screen, (20, 40, 60), (240, 100), (260, 100))
+                        pygame.draw.line(screen, (20, 40, 60), (245, 75), (255, 75))
+                        pygame.draw.line(screen, (20, 40, 60), (240, 50), (260, 50))
+                        pygame.draw.line(screen, (20, 40, 60), (245, 25), (255, 25))
+                        pygame.draw.line(screen, (20, 40, 60), (240, 0), (260, 0))
+                        pygame.draw.line(screen, (20, 40, 60), (245, 275), (255, 275))
+                        pygame.draw.line(screen, (20, 40, 60), (240, 300), (260, 300))
+                        pygame.draw.line(screen, (20, 40, 60), (245, 325), (255, 325))
+                        pygame.draw.line(screen, (20, 40, 60), (240, 350), (260, 350))
+                        pygame.draw.line(screen, (20, 40, 60), (245, 375), (255, 375))
+                        pygame.draw.line(screen, (20, 40, 60), (240, 400), (260, 400))
+                        pygame.draw.line(screen, (20, 40, 60), (245, 425), (255, 425))
+                        pygame.draw.line(screen, (20, 40, 60), (240, 450), (260, 450))
+                        pygame.draw.line(screen, (20, 40, 60), (245, 475), (255, 475))
+                        pygame.draw.line(screen, (20, 40, 60), (240, 500), (260, 500))
+
+                        pygame.draw.line(screen, (20, 40, 60), (225, 245), (225, 255))
+                        pygame.draw.line(screen, (20, 40, 60), (200, 240), (200, 260))
+                        pygame.draw.line(screen, (20, 40, 60), (175, 245), (175, 255))
+                        pygame.draw.line(screen, (20, 40, 60), (150, 240), (150, 260))
+                        pygame.draw.line(screen, (20, 40, 60), (125, 245), (125, 255))
+                        pygame.draw.line(screen, (20, 40, 60), (100, 240), (100, 260))
+                        pygame.draw.line(screen, (20, 40, 60), (75, 245), (75, 255))
+                        pygame.draw.line(screen, (20, 40, 60), (50, 240), (50, 260))
+                        pygame.draw.line(screen, (20, 40, 60), (25, 245), (25, 255))
+                        pygame.draw.line(screen, (20, 40, 60), (275, 245), (275, 255))
+                        pygame.draw.line(screen, (20, 40, 60), (300, 240), (300, 260))
+                        pygame.draw.line(screen, (20, 40, 60), (325, 245), (325, 255))
+                        pygame.draw.line(screen, (20, 40, 60), (350, 240), (350, 260))
+                        pygame.draw.line(screen, (20, 40, 60), (375, 245), (375, 255))
+                        pygame.draw.line(screen, (20, 40, 60), (400, 240), (400, 260))
+                        pygame.draw.line(screen, (20, 40, 60), (425, 245), (425, 255))
+                        pygame.draw.line(screen, (20, 40, 60), (450, 240), (450, 260))
+                        pygame.draw.line(screen, (20, 40, 60), (475, 245), (475, 255))
+                        pygame.draw.line(screen, (20, 40, 60), (500, 240), (500, 260))
+
+                        pygame.display.update()
+                        
+                        altx = float(i + 250)
+                        alty = float((a * i ** 2 + b) * -1)
+                        
+                        x = float(i + 300)
+                        y = float((a * (i + 50) ** 2 + b) * -1)
+                        
+                        #print("x= " + str(x) + "y= " + str(y) + "altx= " + str(altx) + "alty= " + str(alty))
+                        pygame.draw.line(screen, (0, 0, 255), (altx, alty), (x, y))
+                        pygame.display.update()
                     
             elif(option == float(3)):
 
@@ -444,12 +572,27 @@ def mainMenu():
             elif(option == float(31)):
                 result = hashlib.blake2b(input1.encode("ascii")).hexdigest()
                 resultFunction(result)
-                resultFunction(result)
             elif(option == float(32)):
                 result = hashlib.blake2s(input1.encode("ascii")).hexdigest()
                 resultFunction(result)
 
         cryptoMenu(option)
+
+
+    elif(option == float(8)):
+        def konsMenu(option):
+            option = float(input("[0:go back] [1:Mathe] [2:Physik]"))
+
+            if(option == float(1)):
+                option = float(input("[0:go back] [1:pi]"))
+
+                if(option == float(1)):
+                    result = math.pi
+                    resultFunction(result)
+
+        konsMenu(option)
+
+        
     
                 
     
@@ -458,7 +601,7 @@ def mainMenu():
     if(option == 7):
         result = "\nFunction not availible yet"
         resultFunction(result)
-    if(option == 69):
+    elif(option == 69):
         print("\nNice!\n")
     elif(option == 0): 
         exit()
