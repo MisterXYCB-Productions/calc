@@ -12,8 +12,12 @@ def mainMenu():
     option = 0
 
     #main Menu
-    option = float(input("[0:exit] [1:einfach] [2:komplex] [3:trigonometrie] [4:umrechnung] [5:grafiktaschenrechner] [6:algorithmen] [7:freie berechnung] [8:konstanten]"))
+    option = str(input("[0:exit] [1:einfach] [2:komplex] [3:trigonometrie] [4:umrechnung] [5:grafiktaschenrechner] [6:algorithmen] [7:freie berechnung] [8:konstanten]"))
 
+    if(option == str("F")):
+        print("Press F to pay respect")
+        option = float(0)
+     
     
 
     #easter egg: 1 Rock Paper Scissors game!
