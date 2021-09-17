@@ -15,8 +15,10 @@ def mainMenu():
     option = str(input("[0:exit] [1:einfach] [2:komplex] [3:trigonometrie] [4:umrechnung] [5:grafiktaschenrechner] [6:algorithmen] [7:freie berechnung] [8:konstanten]"))
 
     if(option == str("F")):
-        print("Press F to pay respect")
-        option = float(0)
+        print("\nPress F to pay respect\n")
+        option = float(input("[0:exit] [1:einfach] [2:komplex] [3:trigonometrie] [4:umrechnung] [5:grafiktaschenrechner] [6:algorithmen] [7:freie berechnung] [8:konstanten]"))
+    
+    option = float(option)
      
     
 
@@ -310,7 +312,7 @@ def mainMenu():
 
 
 
-            option = float(input("[1:linear] [2:] [3:sinusfuktion] [4:cosinusfunktion]"))
+            option = float(input("[1:linear] [2:exponential] [3:sinusfuktion] [4:cosinusfunktion]"))
             import pygame
 
             if(option == 1):
