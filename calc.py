@@ -316,7 +316,7 @@ def mainMenu():
 
 
 
-            option = float(input("[1:linear] [2:] [3:sinusfuktion] [4:cosinusfunktion]"))
+            option = float(input("[1:linear] [2:exponential] [3:sinusfuktion] [4:cosinusfunktion]"))
             import pygame
 
             if(option == 1):
