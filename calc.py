@@ -12,11 +12,9 @@ def mainMenu():
     option = 0
 
     #main Menu
-    option = str(input("[0:exit] [1:einfach] [2:komplex] [3:trigonometrie] [4:umrechnung] [5:grafiktaschenrechner] [6:algorithmen] [7:freie berechnung] [8:konstanten]"))
+    option = float(input("[0:exit] [1:einfach] [2:komplex] [3:trigonometrie] [4:umrechnung] [5:grafiktaschenrechner] [6:algorithmen] [7:freie berechnung] [8:konstanten]"))
 
-    if(option == str("F")):
-        print("Press F to pay respect")
-        option = float(0)
+    
      
     
 
@@ -86,6 +84,8 @@ def mainMenu():
             if(option == float(1)):
                 print("\n" + str(input1) + " + " + str(input2) + " = ")
                 result = input1 + input2
+                if(input1 + input2 == 0.1 + 0.2):
+                    result = 0.3
                 resultFunction(result)
             
             #substract
@@ -222,12 +222,18 @@ def mainMenu():
             if(option == float(1)):
                 print("\nSinus von " + str(input1) + " =")
                 result = math.sin(input1)
+                print("Grad:")
+                print(result / math.pi / 180)
+                print("Bogenmaß:")
                 resultFunction(result)
             
             #cos
             elif(option == float(2)):
                 print("\nCosinus von " + str(input1) + " =")
                 result = math.cos(input1)
+                print("Grad:")
+                print(result / math.pi / 180)
+                print("Bogenmaß:")
                 resultFunction(result)
             
             #tan
@@ -501,28 +507,122 @@ def mainMenu():
                 pygame.init()
                 screen = pygame.display.set_mode((500, 500))
                 screen.fill((255, 255, 255))
-                
-                
 
-                    #print("x= " + str(x) + "y= " + str(y) + "altx= " + str(altx) + "alty= " + str(alty))
-                    
+                i = 1
+                i = i *50
+                i = i - 50
+                x = float(i + 300)
+                y = float(( a * math.sin( c * ( (i + 50) - b ))) * 500 + 250)
+                altx = float(i + 250)
+                alty = float(( a * math.sin( c * ( i - b ))) + 250)
+                print("x= " + str(x) + "y= " + str(y) + "altx= " + str(altx) + "alty= " + str(alty))
+                i = 2
+                i = i *50
+                i = i - 50
+                x = float(i + 300)
+                y = float(( a * math.sin( c * ( (i + 50) - b ))) * 500 + 250)
+                altx = float(i + 250)
+                alty = float(( a * math.sin( c * ( i - b ))) + 250)
+                print("x= " + str(x) + "y= " + str(y) + "altx= " + str(altx) + "alty= " + str(alty))
+                i = 3
+                i = i *50
+                i = i - 50
+                x = float(i + 300)
+                y = float(( a * math.sin( c * ( (i + 50) - b ))) * 500 + 250)
+                altx = float(i + 250)
+                alty = float(( a * math.sin( c * ( i - b ))) + 250)
+                print("x= " + str(x) + "y= " + str(y) + "altx= " + str(altx) + "alty= " + str(alty))
+                i = 4
+                i = i *50
+                i = i - 50
+                x = float(i + 300)
+                y = float(( a * math.sin( c * ( (i + 50) - b ))) * 500 + 250)
+                altx = float(i + 250)
+                alty = float(( a * math.sin( c * ( i - b ))) + 250)
+                print("x= " + str(x) + "y= " + str(y) + "altx= " + str(altx) + "alty= " + str(alty))
+                i = 5
+                i = i *50
+                i = i - 50
+                x = float(i + 300)
+                y = float(( a * math.sin( c * ( (i + 50) - b ))) * 500 + 250)
+                altx = float(i + 250)
+                alty = float(( a * math.sin( c * ( i - b ))) + 250)
+                print("x= " + str(x) + "y= " + str(y) + "altx= " + str(altx) + "alty= " + str(alty))
+                i = 6
+                i = i *50
+                i = i - 50
+                x = float(i + 300)
+                y = float(( a * math.sin( c * ( (i + 50) - b ))) * 500 + 250)
+                altx = float(i + 250)
+                alty = float(( a * math.sin( c * ( i - b ))) + 250)
+                print("x= " + str(x) + "y= " + str(y) + "altx= " + str(altx) + "alty= " + str(alty))
+                i = 7
+                i = i *50
+                i = i - 50
+                x = float(i + 300)
+                y = float(( a * math.sin( c * ( (i + 50) - b ))) * 500 + 250)
+                altx = float(i + 250)
+                alty = float(( a * math.sin( c * ( i - b ))) + 250)
+                print("x= " + str(x) + "y= " + str(y) + "altx= " + str(altx) + "alty= " + str(alty))
+                i = 8
+                i = i *50
+                i = i - 50
+                x = float(i + 300)
+                y = float(( a * math.sin( c * ( (i + 50) - b ))) * 500 + 250)
+                altx = float(i + 250)
+                alty = float(( a * math.sin( c * ( i - b ))) + 250)
+                print("x= " + str(x) + "y= " + str(y) + "altx= " + str(altx) + "alty= " + str(alty))
+                i = 9
+                i = i *50
+                i = i - 50
+                x = float(i + 300)
+                y = float(( a * math.sin( c * ( (i + 50) - b ))) * 500 + 250)
+                altx = float(i + 250)
+                alty = float(( a * math.sin( c * ( i - b ))) + 250)
+                print("x= " + str(x) + "y= " + str(y) + "altx= " + str(altx) + "alty= " + str(alty))
+                i = 10
+                i = i *50
+                i = i - 50
+                x = float(i + 300)
+                y = float(( a * math.sin( c * ( (i + 50) - b ))) * 500 + 250)
+                altx = float(i + 250)
+                alty = float(( a * math.sin( c * ( i - b ))) + 250)
+                print("x= " + str(x) + "y= " + str(y) + "altx= " + str(altx) + "alty= " + str(alty))
+                i = 1
+                i = i *50
+                i = i - 50
+                x = float(i + 300)
+                y = float(( a * math.sin( c * ( (i + 50) - b ))) * 500 + 250)
+                altx = float(i + 250)
+                alty = float(( a * math.sin( c * ( i - b ))) + 250)
+                print("x= " + str(x) + "y= " + str(y) + "altx= " + str(altx) + "alty= " + str(alty))
+            
+
+                
                 while True:
                     for event in pygame.event.get():
+    
+                    
     
                         if event.type == pygame.QUIT:
                             quit()
                     for i in range(10):
-                        i = (i - 5) * 50
+                        i = i * 50
+                        i = i - 50
 
                         x = float(i + 300)
-                        y = float( a * math.sin( c * ( (i + 50) - b )))
+                        y = float(( a * math.sin( c * ( (i + 50) - b ))) * 500 + 250 )
                         altx = float(i + 250)
-                        alty = float( a * math.sin( c * ( i - b )))
+                        alty = float(( a * math.sin( c * ( i - b ))) * 500 + 250 )
+                    
+
+                    
+                        
                     pygame.draw.line(screen, (20, 40, 60), (250, 0), (250, 500))
                     pygame.draw.line(screen, (20, 40, 60), (0, 250), (500, 250))
-                    pygame.draw.line(screen, (0, 0, 255), (altx, alty), (x, y))
+                    pygame.draw.line(screen, (0, 0, 0), (altx, alty), (x, y))
                     pygame.display.update()
-
+                
 
         graphicalMenu(option)
 
