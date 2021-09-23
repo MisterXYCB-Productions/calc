@@ -410,92 +410,7 @@ def mainMenu():
                         
             elif(option == float(2)):
                 print("formel: f(x)=ax^2+b")
-                a = float(input("a: "))
-                b = float(input("b: ")) * 50 - float(250)
-
-                pygame.init()
-                screen = pygame.display.set_mode((500, 500))
-                screen.fill((255, 255, 255))
-
-                for i in range(10):
-                        i = (i - 5) * 50
-
-                        altx = float(i + 250)
-                        alty = float((a * i ** 2 + b) * -1)
-                        
-                        x = float(i + 300)
-                        y = float((a * (i + 50) ** 2 + b) * -1)
-                        
-                        print("x= " + str(x) + "y= " + str(y) + "altx= " + str(altx) + "alty= " + str(alty))
-                        #pygame.draw.line(screen, (255, 255, 255), (altx, alty), (x, y), 2)
-                        #pygame.display.update()
-
-                while True:
-                    for event in pygame.event.get():
-        
-                        if event.type == pygame.QUIT:
-                            quit()
-    
-                    
-                    for i in range(10):
-                        i = (i - 5) * 50
-                        
-                        pygame.draw.line(screen, (20, 40, 60), (250, 0), (250, 500))
-                        pygame.draw.line(screen, (20, 40, 60), (0, 250), (500, 250))
-
-                        pygame.draw.line(screen, (20, 40, 60), (245, 225), (255, 225))
-                        pygame.draw.line(screen, (20, 40, 60), (240, 200), (260, 200))
-                        pygame.draw.line(screen, (20, 40, 60), (245, 175), (255, 175))
-                        pygame.draw.line(screen, (20, 40, 60), (240, 150), (260, 150))
-                        pygame.draw.line(screen, (20, 40, 60), (245, 125), (255, 125))
-                        pygame.draw.line(screen, (20, 40, 60), (240, 100), (260, 100))
-                        pygame.draw.line(screen, (20, 40, 60), (245, 75), (255, 75))
-                        pygame.draw.line(screen, (20, 40, 60), (240, 50), (260, 50))
-                        pygame.draw.line(screen, (20, 40, 60), (245, 25), (255, 25))
-                        pygame.draw.line(screen, (20, 40, 60), (240, 0), (260, 0))
-                        pygame.draw.line(screen, (20, 40, 60), (245, 275), (255, 275))
-                        pygame.draw.line(screen, (20, 40, 60), (240, 300), (260, 300))
-                        pygame.draw.line(screen, (20, 40, 60), (245, 325), (255, 325))
-                        pygame.draw.line(screen, (20, 40, 60), (240, 350), (260, 350))
-                        pygame.draw.line(screen, (20, 40, 60), (245, 375), (255, 375))
-                        pygame.draw.line(screen, (20, 40, 60), (240, 400), (260, 400))
-                        pygame.draw.line(screen, (20, 40, 60), (245, 425), (255, 425))
-                        pygame.draw.line(screen, (20, 40, 60), (240, 450), (260, 450))
-                        pygame.draw.line(screen, (20, 40, 60), (245, 475), (255, 475))
-                        pygame.draw.line(screen, (20, 40, 60), (240, 500), (260, 500))
-
-                        pygame.draw.line(screen, (20, 40, 60), (225, 245), (225, 255))
-                        pygame.draw.line(screen, (20, 40, 60), (200, 240), (200, 260))
-                        pygame.draw.line(screen, (20, 40, 60), (175, 245), (175, 255))
-                        pygame.draw.line(screen, (20, 40, 60), (150, 240), (150, 260))
-                        pygame.draw.line(screen, (20, 40, 60), (125, 245), (125, 255))
-                        pygame.draw.line(screen, (20, 40, 60), (100, 240), (100, 260))
-                        pygame.draw.line(screen, (20, 40, 60), (75, 245), (75, 255))
-                        pygame.draw.line(screen, (20, 40, 60), (50, 240), (50, 260))
-                        pygame.draw.line(screen, (20, 40, 60), (25, 245), (25, 255))
-                        pygame.draw.line(screen, (20, 40, 60), (275, 245), (275, 255))
-                        pygame.draw.line(screen, (20, 40, 60), (300, 240), (300, 260))
-                        pygame.draw.line(screen, (20, 40, 60), (325, 245), (325, 255))
-                        pygame.draw.line(screen, (20, 40, 60), (350, 240), (350, 260))
-                        pygame.draw.line(screen, (20, 40, 60), (375, 245), (375, 255))
-                        pygame.draw.line(screen, (20, 40, 60), (400, 240), (400, 260))
-                        pygame.draw.line(screen, (20, 40, 60), (425, 245), (425, 255))
-                        pygame.draw.line(screen, (20, 40, 60), (450, 240), (450, 260))
-                        pygame.draw.line(screen, (20, 40, 60), (475, 245), (475, 255))
-                        pygame.draw.line(screen, (20, 40, 60), (500, 240), (500, 260))
-
-                        pygame.display.update()
-                        
-                        altx = float(i + 250)
-                        alty = float((a * i ** 2 + b) * -1)
-                        
-                        x = float(i + 300)
-                        y = float((a * (i + 50) ** 2 + b) * -1)
-                        
-                        #print("x= " + str(x) + "y= " + str(y) + "altx= " + str(altx) + "alty= " + str(alty))
-                        pygame.draw.line(screen, (0, 0, 255), (altx, alty), (x, y))
-                        pygame.display.update()
-                    
+                
             elif(option == float(3)):
 
 
@@ -509,26 +424,29 @@ def mainMenu():
                 screen.fill((255, 255, 255))
 
                 for i in range(10):
-                    i = i - 5
-                    x = float(i * 50 + 300)
-                    y = float(math.sin(math.radians(i + 1)) * 250 + 250)
-                    altx = float(i * 50 + 250)
-                    alty = float(math.sin(math.radians(i)) * 250 + 250)
+                    i = i * 50
+                    i = i + 250
+
+                    x = float(i * + 50)
+                    y = float( a * math.sin( c * (math.radians(i - b ))))
+                    altx = float(i)
+                    alty = float( a * math.sin( c * (math.radians((i - 50 ) - b ))))
                     print("x= " + str(x) + "y= " + str(y) + "altx= " + str(altx) + "alty= " + str(alty))
                 
                 while True:
                     for event in pygame.event.get():
     
-                    
     
                         if event.type == pygame.QUIT:
                             quit()
                     for i in range(10):
-                        i = i - 5
-                        x = float(i * 50 + 300)
-                        y = float(math.sin(math.radians(i + 1)) * 250 + 250)
-                        altx = float(i * 50 + 250)
-                        alty = float(math.sin(math.radians(i)) * 250 + 250)
+                        i = i * 50
+                        i = i + 250
+
+                        x = float(i + 50)
+                        y = float( a * math.sin( c * (math.radians(i - b ))) + 250 )
+                        altx = float(i)
+                        alty = float( a * math.sin( c * (math.radians((i - 50 ) - b ))) + 250 )
                         pygame.draw.line(screen, (0, 0, 0), (altx, alty), (x, y))
                         pygame.display.update()
                     
@@ -601,7 +519,7 @@ def mainMenu():
 
     elif(option == float(8)):
         def konsMenu(option):
-            option = float(input("[0:go back] [1:Mathe] [2:Physik]"))
+            option = float(input("[0:go back] [1:Mathe] [2:Physik] [3:Chemie]"))
 
             if(option == float(1)):
                 option = float(input("[0:go back] [1:pi]"))
@@ -609,6 +527,42 @@ def mainMenu():
                 if(option == float(1)):
                     result = math.pi
                     resultFunction(result)
+            elif(option == float(2)):
+                result = 0
+
+            elif(option == float(3)):
+                input1 = str(input("input1: "))
+
+                if(input1 == str("1")):
+                    input1 = "h"
+                if(input1 == str("2")):
+                    input1 = "he"
+
+                if(input1 == str("h")):
+                    name = "Wasserstoff"
+                    proton = "1"
+                    neutron = "1"
+                    elektron = "1"
+                    schmelz = "-259,1"
+                    siede = "-252,9"
+                elif(input1 == str("he")):
+                    name = "Helium"
+                    proton = "2"
+                    neutron = "2"
+                    elektron = "2"
+                    schmelz = "N/A"
+                    siede = "-269"
+
+
+            print("Name = " + name)
+            print("Protonenanzahl = " + proton)
+            print("Neutronenzahl = " + neutron)
+            print("Elektronenzahl = " + neutron)
+            print("Schmelzpunkt = " + schmelz + "°C")
+            print("Siedepunkt = " + siede + "°C")
+                    
+
+
 
         konsMenu(option)
 
