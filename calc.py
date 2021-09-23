@@ -324,8 +324,10 @@ def mainMenu():
                 a = float(input("a: "))
                 b = float(input("b: ")) * 50 - float(250)
 
+                screenx = 500
+                screeny = 500
                 pygame.init()
-                screen = pygame.display.set_mode((500, 500))
+                screen = pygame.display.set_mode((screenx, screeny))
                 screen.fill((255, 255, 255))
 
                 for i in range(10):
@@ -419,18 +421,27 @@ def mainMenu():
                 b = float(input("b: "))
                 c = float(input("c: "))
 
+                screenx = 500
+                screeny = 500
+
                 pygame.init()
-                screen = pygame.display.set_mode((500, 500))
+                screen = pygame.display.set_mode((screenx, screeny))
                 screen.fill((255, 255, 255))
 
-                for i in range(10):
-                    i = i * 50
-                    i = i + 250
+                for x in range(screenx):
 
-                    x = float(i * + 50)
-                    y = float( a * math.sin( c * (math.radians(i - b ))))
-                    altx = float(i)
-                    alty = float( a * math.sin( c * (math.radians((i - 50 ) - b ))))
+                    x = x
+                    altx = x - 1
+                    y = a * math.sin(c * (x -b))
+                    alty = a * math.sin(c * (altx -b))
+
+                    
+
+                    y = y * 250
+                    alty = alty * 250
+                    y = y + 250
+                    alty = alty + 250
+                    
                     print("x= " + str(x) + "y= " + str(y) + "altx= " + str(altx) + "alty= " + str(alty))
                 
                 while True:
@@ -439,15 +450,20 @@ def mainMenu():
     
                         if event.type == pygame.QUIT:
                             quit()
-                    for i in range(10):
-                        i = i * 50
-                        i = i + 250
+                    for x in range(screenx):
+                        
+                        altx = x - 1
+                        altx = altx * 0.01
+                        x = x * 0.01
+                        alty = a * math.sin((c * ( altx - b)))
+                        y = a * math.sin((c * ( x - b)))
+                        y = y * 100
+                        alty = alty * 100
+                        x = x * 100
+                        altx = altx * 100
 
-                        x = float(i + 50)
-                        y = float( a * math.sin( c * (math.radians(i - b ))) + 250 )
-                        altx = float(i)
-                        alty = float( a * math.sin( c * (math.radians((i - 50 ) - b ))) + 250 )
-                        pygame.draw.line(screen, (0, 0, 0), (altx, alty), (x, y))
+                        
+                        pygame.draw.line(screen, (255, 0, 0), (altx, alty + int(screenx / 2)), (x, y + int(screenx / 2)))
                         pygame.display.update()
                     
 
