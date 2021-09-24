@@ -546,6 +546,8 @@ def mainMenu():
                 result = sum(map(float,(input1.split('*'))))
             if(input1.find('/')!=-1):
                 result = sum(map(float,(input1.split('/'))))
+
+            print(float(str(input1)))
             
 
             print(result)
