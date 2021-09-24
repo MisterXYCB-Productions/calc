@@ -532,6 +532,16 @@ def mainMenu():
 
         cryptoMenu(option)
 
+    #Freie berechnung (funktioniert nicht!!!)
+    elif(option == float(7)):
+        def freeMenu(option):
+            input1 = float(input("Input1: "))
+            print(input1)
+
+
+
+
+        freeMenu(option)
 
     elif(option == float(8)):
         def konsMenu(option):
