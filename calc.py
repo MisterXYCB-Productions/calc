@@ -535,8 +535,22 @@ def mainMenu():
     #Freie berechnung (funktioniert nicht!!!)
     elif(option == float(7)):
         def freeMenu(option):
-            input1 = float(input("Input1: "))
-            print(input1)
+            
+            print("\naktuell können nur + - * / benutzt werden können und nur ein Operator gleichzeitig!!!\n")
+            input1 = input("Input1: ")
+            if(input1.find('+')!=-1):
+                result = sum(map(float,(input1.split('+'))))
+            if(input1.find('-')!=-1):
+                result = sum(map(float,(input1.split('-'))))
+            if(input1.find('*')!=-1):
+                result = sum(map(float,(input1.split('*'))))
+            if(input1.find('/')!=-1):
+                result = sum(map(float,(input1.split('/'))))
+            
+
+            print(result)
+            
+            
 
 
 
@@ -598,9 +612,7 @@ def mainMenu():
     
     
     
-    if(option == 7):
-        result = "\nFunction not availible yet"
-        resultFunction(result)
+    
     elif(option == 69):
         print("\nNice!\n")
     elif(option == 0): 
