@@ -575,33 +575,13 @@ def mainMenu():
             elif(option == float(3)):
                 input1 = str(input("input1: "))
 
-                if(input1 == str("1")):
-                    input1 = "h"
-                if(input1 == str("2")):
-                    input1 = "he"
-
-                if(input1 == str("h")):
-                    name = "Wasserstoff"
-                    proton = "1"
-                    neutron = "1"
-                    elektron = "1"
-                    schmelz = "-259,1"
-                    siede = "-252,9"
-                elif(input1 == str("he")):
-                    name = "Helium"
-                    proton = "2"
-                    neutron = "2"
-                    elektron = "2"
-                    schmelz = "N/A"
-                    siede = "-269"
+                f = open("Periodensystem.txt", "r")
+                result = f.readline(input1)
+                resultFunction(result)
+                
 
 
-            print("Name = " + name)
-            print("Protonenanzahl = " + proton)
-            print("Neutronenzahl = " + neutron)
-            print("Elektronenzahl = " + neutron)
-            print("Schmelzpunkt = " + schmelz + "°C")
-            print("Siedepunkt = " + siede + "°C")
+            
                     
 
 
