@@ -14,55 +14,6 @@ def mainMenu():
     #main Menu
     option = float(input("[0:exit] [1:einfach] [2:komplex] [3:trigonometrie] [4:umrechnung] [5:grafiktaschenrechner] [6:algorithmen] [7:freie berechnung] [8:konstanten]"))
 
-    
-     
-    
-
-    #easter egg: 1 Rock Paper Scissors game!
-    if(option == float(42)):
-        def rock_paper_scissors():
-            print("Welcome to Rock Paper Scissors")
-            print("Please choose:")
-            print("1. Rock")
-            print("2. Paper")
-            print("3. Scissors")
-            print("4. Quit")
-            user_choice = int(input("Enter your choice: "))
-            while user_choice != 4:
-                computer_choice = random.randint(1, 3)
-                if user_choice == computer_choice and user_choice == 1:
-                    print("\nTie! We both chose rock!\n")
-                if user_choice == computer_choice and user_choice == 2:
-                    print("\nTie! We both chose paper!\n")
-                if user_choice == computer_choice and user_choice == 3:
-                    print("\nTie! We both chose scissors!\n")
-                elif user_choice == 1 and computer_choice == 2:
-                    print("\nYou lose! I chose paper and you rock!\n")
-                elif user_choice == 1 and computer_choice == 3:
-                    print("\nYou win! You chose rock and i scissors!\n")
-                elif user_choice == 2 and computer_choice == 1:
-                    print("\nYou win! You chose paper and i rock!\n")
-                elif user_choice == 2 and computer_choice == 3:
-                    print("\nYou lose! I chose scissors and you paper!\n")
-                elif user_choice == 3 and computer_choice == 1:
-                    print("\nYou lose! I chose rock and you scissors!\n")
-                elif user_choice == 3 and computer_choice == 2:
-                    print("\nYou win! You chose scissors and i paper!\n")
-                elif(user_choice == float(69)):
-                    print("\nNice!\n")
-                else:
-                    print("\nYou loose because you didnt choose anything\n")
-                print("Please choose:")
-                print("1. Rock")
-                print("2. Paper")
-                print("3. Scissors")
-                print("4. Quit")
-                user_choice = int(input("Enter your choice: "))
-            print("Thanks for playing")
-            mainMenu()
-
-        rock_paper_scissors()
-
     #function to return the result
     def resultFunction(result):
         print(str(result) + "\n")
@@ -260,45 +211,7 @@ def mainMenu():
                 input1 = float(input("input1: "))
 
                 def distancesMenu(option):
-                    #km->mil
-                    if(option == float(1)):
-                        result = input1 / 1.609
-                        resultFunction(result)
                     
-                    #mil->km
-                    elif(option == float(2)):
-                        result = input1 * 1.609
-                        resultFunction(result)
-
-                    #meter->feet
-                    elif(option == float(3)):
-                        result = input1 * 3.281
-                        resultFunction(result)
-
-                    #feet->meter
-                    elif(option == float(4)):
-                        result = input1 / 3.281
-                        resultFunction(result)
-
-                    #cm->zoll
-                    elif(option == float(5)):
-                        result = input1 / 2.54
-                        resultFunction(result)
-                    
-                    #zoll->cm
-                    elif(option == float(6)):
-                        result = input1 * 2.54
-                        resultFunction(result)
-                    
-                    #km->sm
-                    elif(option == float(7)):
-                        result = input1 / 1.852
-                        resultFunction(result)
-                    
-                    #sm->km
-                    elif(option == float(8)):
-                        result = input1 * 1.852
-                        resultFunction(result)
                     
                 distancesMenu(option)
             
