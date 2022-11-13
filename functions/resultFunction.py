@@ -4,5 +4,9 @@ def resultFunction(result, calculation):
         print(calculation)
 
     print("Das Ergebnis ist " + str(result))
-    input("\n\n\nDrücke \"Enter\" um fortzufahren!")
-    return
+    input1 = input("\n\n\nWenn du ins Hauptmenü zurück möchtest drücke \"y\"!")
+    
+    if(str(input1).lower() == "y"):
+        return True
+    else: 
+        return False

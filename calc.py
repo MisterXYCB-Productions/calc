@@ -196,31 +196,6 @@ def mainMenu():
 
         trigonometricMenu(option)
 
-    #conversion
-    elif(option == float(4)):
-        def conversionMenu(option):
-            option = float(input("[0:go back] [1:Länge] [2:Volumen]"))
-        
-            #goback
-            if(option == float(0)):
-                mainMenu()
-        
-            #distances
-            elif(option == float(1)):
-                option = float(input("[1:km->mil] [2:mil->km] [3:meter->feet] [4:feet->meter] [5:cm->zoll] [6:zoll->cm] [7:km->sm] [8:sm->km]"))
-                input1 = float(input("input1: "))
-
-                def distancesMenu(option):
-                    
-                    
-                distancesMenu(option)
-            
-            #volume
-            elif(option == float (2)):
-                result = "error: function not availible yet"
-                resultFunction(result)
-
-        conversionMenu(option)
     
     #space for graphical calculator
     

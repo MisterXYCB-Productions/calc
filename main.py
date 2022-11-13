@@ -2,7 +2,7 @@ import math
 import random
 from pick import pick
 from calcs.rps import rps
-from calcs.einheiten.laengen import laengenMenu
+from calcs.einheitenMenu import einheitenMenu
 
 def startUp():
     index = 0
@@ -12,26 +12,23 @@ def startUp():
 
     option, index = pick(options, title, indicator='=>', default_index=1)
 
-    if(index == 0):
-        print("Closing Process")
-        quit()
+    match index:
+        case 0:
+            print("\n\nClosing Process")
+            quit()
 
-    if(index < 0 or index > 4):
-        print("ERROR: CHOSEN OPTION IS NOT SUPPORTED")
-        startUp()
+        case 1:
+            print("lol")
 
-    if(index == 1):
-          print("lol")
+        case 2:
+            print("LOL2")
 
-    if(index == 2):
-        print("LOL2")
+        case 3:
+            einheitenMenu() 
 
-    if(index == 3):
-        laengenMenu() 
-
-    if(index == 4):
-        print("RPS")
-        rps()
+        case 4:
+            print("RPS")
+            rps()
 
     startUp()
 
