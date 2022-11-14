@@ -1,6 +1,7 @@
 import math
 import random
 from pick import pick
+from calcs.mathematikMenu import mathematikMenu
 from calcs.rps import rps
 from calcs.einheitenMenu import einheitenMenu
 
@@ -18,7 +19,7 @@ def startUp():
             quit()
 
         case 1:
-            print("lol")
+            mathematikMenu()
 
         case 2:
             print("LOL2")
