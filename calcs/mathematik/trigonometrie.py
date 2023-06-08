@@ -1,14 +1,11 @@
 import math
-from pick import pick
-
-from functions.resultFunction import resultFunction
 
 def trigonometrieMenu():
     calculation = None
     title = "Welche Werte liegen vor?"
     options = ["Back", "SSS", "SWS", "WSW", "WWS"]
 
-    option, index = pick(options, title, indicator='=>', default_index=1)
+    index = int(input(options))
 
     match index:
 
@@ -58,8 +55,7 @@ def trigonometrieMenu():
             
             result = ("\na= " + str(a) + "\nb= " + str(b) + "\nc= " + str(c) + "\nalpha= " + str(gamma) + "\nbeta=  " + str(beta) + "\ngamma= " + str(gamma))
 
-    if(resultFunction(result, calculation)):
-        return True
-    else:
-        trigonometrieMenu()
+    print(result, calculation)
 
+if __name__ == "__main__":
+    trigonometrieMenu()
